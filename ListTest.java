@@ -17,6 +17,7 @@ public class ListTest {
         System.out.println("IsEmpty2 " + testList.isEmpty());
         System.out.println("Size2 " + testList.size());
         System.out.println("Get2 " + testList.get(2));
+        testList.displayList();
         testList.remove(2);
         System.out.println("IsEmpty3 " + testList.isEmpty());
         System.out.println("Size3 " + testList.size());
