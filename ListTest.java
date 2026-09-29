@@ -30,5 +30,9 @@ public class ListTest {
         }catch(ListIndexOutOfBoundsException e){
             e.printStackTrace();
         }
+        testList.add(1, "a");
+        testList.add(2, "richard of york did battle in vain");
+        testList.add(3, "ab");
+        System.out.println("Longest String is: " + testList.listLongest());
     }
 }

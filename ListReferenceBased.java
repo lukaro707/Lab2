@@ -120,12 +120,28 @@ public class ListReferenceBased implements ListInterface
     numItems = 0;
   } // end removeAll
 
+  //displays or prints out the list in some simple way and call this method from the main method in the test class.
   public void displayList(){
     Node curr = head;
     while(curr != null){
       System.out.println(curr.getItem().toString());
       curr = curr.getNext();
     }
+  }
+
+  //finds the longest String object in the list and returns it
+  public int listLongest(){
+    Node curr = head;
+    int currLongest = 0;
+    while(curr != null){
+      // Doing typecasting here is pretty awful, but I'm assuming that the list contains only string objects as instructed
+      int currLength = ((String)curr.getItem()).length();
+      if(currLength > currLongest){
+        currLongest = currLength;
+      }
+      curr = curr.getNext();
+    }
+    return currLongest;
   }
 
 } // end ListReferenceBased
